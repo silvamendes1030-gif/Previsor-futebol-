@@ -6,13 +6,13 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime
+import os
 
+API_KEY = os.getenv("FOOTBALL_DATA_TOKEN")
 st.set_page_config(page_title="Previsor de Futebol", page_icon="⚽", layout="wide")
 
 st.title("⚽ Previsor Global de Futebol")
-st.markdown("*Análise com dados reais, H2H e probabilidades*")
-
-API_KEY = st.secrets["API_KEY"]
+st.markdown("*Análise com dados reais, H2H e 
 BASE_URL = "https://v3.football.api-sports.io"
 HEADERS = {'x-rapidapi-key': API_KEY, 'x-rapidapi-host': 'v3.football.api-sports.io'}
 
